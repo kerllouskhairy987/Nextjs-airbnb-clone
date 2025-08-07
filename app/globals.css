@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --shadow-circle: 0px 0px 10px 300px oklch(0.6892 0.2004 22.38 / 5%); 
+  --shadow-circle: 0px 0px 10px 300px oklch(0.6892 0.2004 22.38 / 5%);
 }
 
 @theme inline {
@@ -129,5 +129,18 @@
 
   .container {
     @apply container mx-auto px-4
+  }
+
+  .space-between-sections {
+    @apply mt-5 md:mt-8;
+  }
+
+  .hidden-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hidden-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
