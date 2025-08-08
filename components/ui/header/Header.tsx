@@ -4,7 +4,7 @@ import Link from 'next/link'
 import SearchBar from './SearchBar'
 import NavLinks from './NavLinks'
 
-const Header = () => {
+const Header = ({placeholder}: {placeholder?: string}) => {
     return (
         <header className='bg-foreground/80 dark:bg-foreground/90 sticky top-0 z-50'>
             <div className='container flex items-center justify-between gap-2'>
@@ -13,7 +13,7 @@ const Header = () => {
                         <Image src="/logo.png" fill alt='logo-img' className='object-contain object-left' />
                     </Link>
                 </div>
-                <SearchBar />
+                <SearchBar placeholder={placeholder} />
                 <NavLinks />
             </div>
         </header>

@@ -5,7 +5,6 @@ import LiveCard from './LiveCard';
 
 const Live = async () => {
     const getLiveData: TLiveData[] = await getLive();
-    console.log(getLiveData)
     return (
         <section>
             <div className='container space-between-sections'>
