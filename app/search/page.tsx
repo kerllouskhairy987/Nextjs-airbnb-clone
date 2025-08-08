@@ -3,13 +3,18 @@ import { Button } from '@/components/ui/button';
 import Header from '@/components/ui/header/Header'
 import { format } from 'date-fns';
 
-type TProps = {
-    location: string;
-    startDate: string;
-    endDate: string;
-    numOfGuests: string;
+type PageProps = {
+    searchParams: Promise<{
+        location?: string;
+        startDate?: string;
+        endDate?: string;
+        numOfGuests?: string;
+    }>;
 }
-const SearchResult = ({ searchParams: { location, startDate, endDate, numOfGuests } }: { searchParams: TProps }) => {
+
+const SearchResult = async ({ searchParams }: PageProps) => {
+    const params = await searchParams;
+    const { location, startDate, endDate, numOfGuests } = params;
 
     let formatStartDate;
     let formatEndDate;
