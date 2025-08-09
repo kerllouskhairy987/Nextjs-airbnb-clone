@@ -6,7 +6,7 @@ import NavLinks from './NavLinks'
 
 const Header = ({placeholder}: {placeholder?: string}) => {
     return (
-        <header className='bg-foreground/80 dark:bg-foreground/90 sticky top-0 z-50'>
+        <header className='bg-foreground/40 dark:bg-foreground/40 sticky top-0 z-50 backdrop-blur-2xl'>
             <div className='container flex items-center justify-between gap-2'>
                 <div className='flex items-center'>
                     <Link href={"/"} className='relative h-20 w-20 md:w-30 lg:w-40'>
